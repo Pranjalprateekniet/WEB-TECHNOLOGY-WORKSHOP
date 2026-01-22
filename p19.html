@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Articles - Independent Content</title>
+    <style>
+        body { 
+            font-family: 'Georgia', serif; 
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); 
+            margin: 0; 
+            padding: 20px; 
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        .container { 
+            max-width: 1000px; 
+            margin: 0 auto; 
+            background-color: white; 
+            padding: 30px; 
+            border-radius: 15px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        header { 
+            text-align: center; 
+            margin-bottom: 40px; 
+            padding-bottom: 20px; 
+            border-bottom: 3px solid #667eea;
+        }
+        h1 { 
+            color: #2c3e50; 
+            font-size: 36px; 
+            margin-bottom: 10px;
+        }
+        .student-info { 
+            background: linear-gradient(45deg, #667eea, #764ba2); 
+            color: white; 
+            padding: 15px; 
+            border-radius: 10px; 
+            margin-bottom: 30px; 
+            text-align: center;
+        }
+        article { 
+            background-color: #f8f9fa; 
+            margin: 30px 0; 
+            padding: 25px; 
+            border-radius: 12px; 
+            border-left: 5px solid #e74c3c; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        article:nth-child(even) { 
+            border-left-color: #3498db; 
+        }
+        article:nth-child(3n) { 
+            border-left-color: #27ae60; 
+        }
+        article header { 
+            border-bottom: 2px solid #ecf0f1; 
+            margin-bottom: 20px; 
+            padding-bottom: 15px;
+            text-align: left;
+        }
+        article h2 { 
+            color: #2c3e50; 
+            font-size: 24px; 
+            margin-bottom: 10px;
+        }
+        .article-meta { 
+            color: #7f8c8d; 
+            font-size: 14px; 
+            font-style: italic;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .article-content { 
+            color: #34495e; 
+            font-size: 16px; 
+            text-align: justify;
+        }
+        .article-footer { 
+            margin-top: 20px; 
+            padding-top: 15px; 
+            border-top: 1px solid #ecf0f1; 
+            font-size: 14px; 
+            color: #95a5a6;
+        }
+        .tag { 
+            background-color: #3498db; 
+            color: white; 
+            padding: 3px 8px; 
+            border-radius: 12px; 
+            font-size: 12px; 
+            margin-right: 5px;
+            display: inline-block;
+        }
+        .article-number { 
+            position: absolute; 
+            top: -10px; 
+            right: 20px; 
+            background: linear-gradient(45deg, #fd79a8, #fdcb6e); 
+            color: white; 
+            width: 40px; 
+            height: 40px; 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-weight: bold; 
+            font-size: 18px;
+        }
+        .highlight { 
+            background-color: #fff3cd; 
+            padding: 2px 6px; 
+            border-radius: 3px; 
+            font-weight: bold;
+        }
+        .code-snippet { 
+            background-color: #2d3436; 
+            color: #00b894; 
+            padding: 15px; 
+            border-radius: 8px; 
+            font-family: 'Courier New', monospace; 
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+        .related-links { 
+            background-color: #e3f2fd; 
+            padding: 15px; 
+            border-radius: 8px; 
+            margin: 15px 0;
+        }
+        .related-links a { 
+            color: #1976d2; 
+            text-decoration: none; 
+            font-weight: bold;
+        }
+        .related-links a:hover { 
+            text-decoration: underline; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>HTML5 Article Elements</h1>
+            <div class="student-info">
+                <strong>Independent, Self-Contained Content Demo</strong><br>
+                Student: Pranjal Prateek | Branch: IT-C | Subject: Web Technology | College: NIET
+            </div>
+        </header>
+
+        <article>
+            <div class="article-number">1</div>
+            <header>
+                <h2>Understanding HTML5 Semantic Elements</h2>
+                <div class="article-meta">
+                    <span>📅 Published: January 15, 2024</span>
+                    <span>👤 Author: Pranjal Prateek</span>
+                    <span>⏱️ Read Time: 5 minutes</span>
+                    <span>🏷️ Category: Web Technology</span>
+                </div>
+            </header>
+            
+            <div class="article-content">
+                <p>HTML5 introduced several new semantic elements that provide better structure and meaning to web documents. The <span class="highlight">&lt;article&gt;</span> element represents a self-contained composition in a document, page, application, or site, which is intended to be independently distributable or reusable.</p>
+                
+                <p>This semantic approach helps search engines, screen readers, and other tools better understand the content structure. Unlike generic <span class="highlight">&lt;div&gt;</span> elements, semantic elements convey meaning about their content.</p>
+                
+                <div class="code-snippet">
+&lt;article&gt;
+    &lt;header&gt;
+        &lt;h2&gt;Article Title&lt;/h2&gt;
+        &lt;p&gt;Article metadata&lt;/p&gt;
+    &lt;/header&gt;
+    &lt;p&gt;Article content...&lt;/p&gt;
+    &lt;footer&gt;
+        &lt;p&gt;Article footer information&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/article&gt;
+                </div>
+                
+                <p>The article element is perfect for blog posts, news articles, forum posts, comments, and any content that makes sense on its own. Each article should be able to stand alone and still make sense if syndicated or shared independently.</p>
+            </div>
+            
+            <footer class="article-footer">
+                <div class="related-links">
+                    <strong>Related Topics:</strong>
+                    <a href="#semantic-html">Semantic HTML</a> |
+                    <a href="#html5-structure">HTML5 Structure</a> |
+                    <a href="#web-accessibility">Web Accessibility</a>
+                </div>
+                <div style="margin-top: 10px;">
+                    <span class="tag">HTML5</span>
+                    <span class="tag">Semantic Web</span>
+                    <span class="tag">Web Standards</span>
+                    <span class="tag">NIET</span>
+                </div>
+            </footer>
+        </article>
+
+        <article>
+            <div class="article-number">2</div>
+            <header>
+                <h2>Web Technology Trends in 2024</h2>
+                <div class="article-meta">
+                    <span>📅 Published: January 20, 2024</span>
+                    <span>👤 Author: Pranjal Prateek</span>
+                    <span>⏱️ Read Time: 7 minutes</span>
+                    <span>🏷️ Category: Technology Trends</span>
+                </div>
+            </header>
+            
+            <div class="article-content">
+                <p>The web technology landscape continues to evolve rapidly in 2024. As an IT-C student at <span class="highlight">NIET</span>, staying updated with current trends is crucial for career success in web development.</p>
+                
+                <p>Key trends shaping web development include:</p>
+                <ul>
+                    <li><strong>Progressive Web Apps (PWAs):</strong> Bridging the gap between web and mobile applications</li>
+                    <li><strong>WebAssembly (WASM):</strong> Enabling high-performance applications in browsers</li>
+                    <li><strong>AI Integration:</strong> Machine learning models running directly in browsers</li>
+                    <li><strong>Serverless Architecture:</strong> Reducing infrastructure complexity</li>
+                    <li><strong>Web Components:</strong> Reusable custom elements for better modularity</li>
+                </ul>
+                
+                <p>For students like myself studying web technology, understanding these trends helps in making informed decisions about which technologies to focus on during our academic journey at NIET.</p>
+                
+                <div class="code-snippet">
+// Example: Modern JavaScript ES2024 features
+const webTrends = {
+    pwa: 'Progressive Web Apps',
+    wasm: 'WebAssembly',
+    ai: 'AI Integration',
+    serverless: 'Serverless Functions'
+};
+
+// Using modern array methods
+const trendList = Object.entries(webTrends)
+    .map(([key, value]) => `${key}: ${value}`)
+    .join('\n');
+
+console.log(trendList);
+                </div>
+            </div>
+            
+            <footer class="article-footer">
+                <div class="related-links">
+                    <strong>Learn More:</strong>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps" target="_blank">PWA Guide</a> |
+                    <a href="https://webassembly.org/" target="_blank">WebAssembly</a> |
+                    <a href="https://web.dev/" target="_blank">Web.dev</a>
+                </div>
+                <div style="margin-top: 10px;">
+                    <span class="tag">Web Trends</span>
+                    <span class="tag">PWA</span>
+                    <span class="tag">WebAssembly</span>
+                    <span class="tag">IT-C</span>
+                </div>
+            </footer>
+        </article>
+
+        <article>
+            <div class="article-number">3</div>
+            <header>
+                <h2>Building Responsive Websites: A Student's Guide</h2>
+                <div class="article-meta">
+                    <span>📅 Published: January 25, 2024</span>
+                    <span>👤 Author: Pranjal Prateek</span>
+                    <span>⏱️ Read Time: 6 minutes</span>
+                    <span>🏷️ Category: Web Design</span>
+                </div>
+            </header>
+            
+            <div class="article-content">
+                <p>Responsive web design is no longer optional—it's essential. As mobile traffic continues to dominate web usage, creating websites that work seamlessly across all devices is a fundamental skill for web developers.</p>
+                
+                <p>During my studies in the IT-C program at <span class="highlight">NIET</span>, I've learned that responsive design involves three key principles:</p>
+                
+                <ol>
+                    <li><strong>Flexible Grid Systems:</strong> Using relative units like percentages instead of fixed pixels</li>
+                    <li><strong>Flexible Images:</strong> Ensuring images scale appropriately with their containers</li>
+                    <li><strong>Media Queries:</strong> Applying different styles based on device characteristics</li>
+                </ol>
+                
+                <div class="code-snippet">
+/* CSS Media Query Example */
+/* Mobile First Approach */
+.container {
+    width: 100%;
+    padding: 10px;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+    .container {
+        width: 750px;
+        margin: 0 auto;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+    .container {
+        width: 1000px;
+        padding: 20px;
+    }
+}
+                </div>
+                
+                <p>The mobile-first approach has become the standard practice, where we design for mobile devices first and then enhance the experience for larger screens. This ensures optimal performance and user experience across all devices.</p>
+                
+                <p>Tools like CSS Grid and Flexbox have revolutionized how we create responsive layouts, making it easier to build complex, flexible designs without relying on external frameworks.</p>
+            </div>
+            
+            <footer class="article-footer">
+                <div class="related-links">
+                    <strong>Resources:</strong>
+                    <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">Flexbox Guide</a> |
+                    <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">CSS Grid Guide</a> |
+                    <a href="https://www.w3schools.com/css/css_rwd_intro.asp" target="_blank">Responsive Design</a>
+                </div>
+                <div style="margin-top: 10px;">
+                    <span class="tag">Responsive Design</span>
+                    <span class="tag">CSS Grid</span>
+                    <span class="tag">Flexbox</span>
+                    <span class="tag">Mobile First</span>
+                </div>
+            </footer>
+        </article>
+
+        <div style="background-color: #e8f5e9; padding: 25px; border-radius: 12px; margin-top: 40px;">
+            <h3 style="color: #2e7d32; margin-top: 0;">🎯 HTML5 Article Element Benefits:</h3>
+            <ul style="color: #388e3c; line-height: 1.8;">
+                <li><strong>Semantic Meaning:</strong> Clearly identifies independent, self-contained content</li>
+                <li><strong>SEO Benefits:</strong> Search engines better understand content structure</li>
+                <li><strong>Accessibility:</strong> Screen readers can navigate content more effectively</li>
+                <li><strong>Syndication:</strong> Content can be easily shared or distributed</li>
+                <li><strong>Maintainability:</strong> Code is more organized and easier to maintain</li>
+                <li><strong>Future-Proof:</strong> Follows web standards and best practices</li>
+            </ul>
+            
+            <div style="background-color: white; padding: 15px; border-radius: 8px; margin-top: 15px;">
+                <h4 style="color: #2c3e50; margin-top: 0;">When to Use &lt;article&gt;:</h4>
+                <ul style="color: #34495e;">
+                    <li>Blog posts and news articles</li>
+                    <li>Forum posts and comments</li>
+                    <li>Product reviews and testimonials</li>
+                    <li>Social media posts</li>
+                    <li>Any content that makes sense independently</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

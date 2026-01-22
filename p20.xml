@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- XML Document with Self-Descriptive Tags -->
+<!-- Created by: Pranjal Prateek, IT-C, NIET -->
+<!-- Subject: Web Technology -->
+
+<student_information>
+    <personal_details>
+        <student_name>Pranjal Prateek</student_name>
+        <student_id>NIET2024IT001</student_id>
+        <branch>IT-C</branch>
+        <college>NIET</college>
+        <college_full_name>Noida Institute of Engineering and Technology</college_full_name>
+        <location>Greater Noida, Uttar Pradesh</location>
+        <enrollment_year>2024</enrollment_year>
+    </personal_details>
+    
+    <academic_information>
+        <current_semester>4</current_semester>
+        <current_subject>Web Technology</current_subject>
+        <course_code>CS401</course_code>
+        <faculty_name>Dr. Rajesh Kumar</faculty_name>
+        <academic_year>2024-2025</academic_year>
+        
+        <subjects_enrolled>
+            <subject>
+                <subject_name>Web Technology</subject_name>
+                <subject_code>CS401</subject_code>
+                <credits>4</credits>
+                <type>Theory + Lab</type>
+            </subject>
+            <subject>
+                <subject_name>Database Management Systems</subject_name>
+                <subject_code>CS402</subject_code>
+                <credits>4</credits>
+                <type>Theory + Lab</type>
+            </subject>
+            <subject>
+                <subject_name>Computer Networks</subject_name>
+                <subject_code>CS403</subject_code>
+                <credits>3</credits>
+                <type>Theory</type>
+            </subject>
+            <subject>
+                <subject_name>Software Engineering</subject_name>
+                <subject_code>CS404</subject_code>
+                <credits>3</credits>
+                <type>Theory</type>
+            </subject>
+        </subjects_enrolled>
+    </academic_information>
+    
+    <contact_information>
+        <email_address>pranjal.prateek@niet.co.in</email_address>
+        <phone_number>+91-9876543210</phone_number>
+        <address>
+            <hostel_name>NIET Boys Hostel Block A</hostel_name>
+            <room_number>A-205</room_number>
+            <city>Greater Noida</city>
+            <state>Uttar Pradesh</state>
+            <postal_code>201310</postal_code>
+            <country>India</country>
+        </address>
+    </contact_information>
+    
+    <technical_skills>
+        <programming_languages>
+            <language proficiency="intermediate">HTML5</language>
+            <language proficiency="intermediate">CSS3</language>
+            <language proficiency="beginner">JavaScript</language>
+            <language proficiency="intermediate">Java</language>
+            <language proficiency="beginner">Python</language>
+            <language proficiency="intermediate">C++</language>
+        </programming_languages>
+        
+        <web_technologies>
+            <technology level="learning">Bootstrap</technology>
+            <technology level="learning">jQuery</technology>
+            <technology level="basic">Node.js</technology>
+            <technology level="basic">MySQL</technology>
+            <technology level="learning">XML</technology>
+            <technology level="learning">JSON</technology>
+        </web_technologies>
+        
+        <tools_and_software>
+            <tool>Visual Studio Code</tool>
+            <tool>Git</tool>
+            <tool>GitHub</tool>
+            <tool>MySQL Workbench</tool>
+            <tool>Postman</tool>
+            <tool>Chrome DevTools</tool>
+        </tools_and_software>
+    </technical_skills>
+    
+    <project_information>
+        <current_projects>
+            <project status="in_progress">
+                <project_name>Student Management System</project_name>
+                <project_type>Web Application</project_type>
+                <technologies_used>HTML, CSS, JavaScript, MySQL</technologies_used>
+                <start_date>2024-01-10</start_date>
+                <expected_completion>2024-03-15</expected_completion>
+                <description>A web-based system to manage student information, attendance, and grades</description>
+            </project>
+            
+            <project status="completed">
+                <project_name>Personal Portfolio Website</project_name>
+                <project_type>Static Website</project_type>
+                <technologies_used>HTML5, CSS3, JavaScript</technologies_used>
+                <start_date>2023-12-01</start_date>
+                <completion_date>2023-12-20</completion_date>
+                <description>Responsive portfolio website showcasing academic projects and skills</description>
+            </project>
+        </current_projects>
+    </project_information>
+    
+    <achievements_and_activities>
+        <academic_achievements>
+            <achievement>
+                <title>Best Student in Web Technology</title>
+                <date>2024-01-15</date>
+                <description>Awarded for excellent performance in web technology assignments</description>
+            </achievement>
+            <achievement>
+                <title>Programming Competition Winner</title>
+                <date>2023-11-20</date>
+                <description>First place in NIET inter-college programming competition</description>
+            </achievement>
+        </academic_achievements>
+        
+        <extracurricular_activities>
+            <activity>
+                <activity_name>Web Development Club</activity_name>
+                <role>Member</role>
+                <duration>2023-Present</duration>
+            </activity>
+            <activity>
+                <activity_name>Technical Fest Organization</activity_name>
+                <role>Volunteer</role>
+                <duration>2024</duration>
+            </activity>
+        </extracurricular_activities>
+    </achievements_and_activities>
+    
+    <future_goals>
+        <short_term_goals>
+            <goal>Master JavaScript and modern web frameworks</goal>
+            <goal>Complete internship at a tech company</goal>
+            <goal>Build 5 full-stack web applications</goal>
+        </short_term_goals>
+        
+        <long_term_goals>
+            <goal>Become a full-stack web developer</goal>
+            <goal>Start own web development company</goal>
+            <goal>Contribute to open-source projects</goal>
+        </long_term_goals>
+    </future_goals>
+    
+    <document_metadata>
+        <created_date>2024-01-22</created_date>
+        <last_modified>2024-01-22</last_modified>
+        <version>1.0</version>
+        <created_by>Pranjal Prateek</created_by>
+        <purpose>XML demonstration for Web Technology course</purpose>
+        <version>1.0</version>
+        <format>UTF-8</format>
+    </document_metadata>
+</student_portfolio> for Web Technology course</purpose>
+        <file_format>XML</file_format>
+        <encoding>UTF-8</encoding>
+    </document_metadata>
+</student_information>

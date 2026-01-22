@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Properties Demo</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #f4f4f4; }
+        .container { background: white; padding: 20px; border-radius: 8px; max-width: 800px; margin: 0 auto; }
+        .header { background: #3498db; color: white; padding: 15px; text-align: center; border-radius: 5px; margin-bottom: 20px; }
+        
+        /* Color Examples */
+        .color-red { color: #e74c3c; background: #ffebee; padding: 10px; margin: 5px 0; }
+        .color-blue { color: #3498db; background: #e3f2fd; padding: 10px; margin: 5px 0; }
+        .color-green { color: #27ae60; background: #e8f5e9; padding: 10px; margin: 5px 0; }
+        
+        /* Border Examples */
+        .border-solid { border: 3px solid #e74c3c; padding: 10px; margin: 10px 0; }
+        .border-dashed { border: 3px dashed #3498db; padding: 10px; margin: 10px 0; }
+        .border-dotted { border: 3px dotted #27ae60; padding: 10px; margin: 10px 0; }
+        
+        /* Margin Examples */
+        .margin-small { margin: 10px; background: #fff3cd; padding: 10px; }
+        .margin-large { margin: 30px; background: #d4edda; padding: 10px; }
+        
+        /* Font Style Examples */
+        .font-normal { font-style: normal; font-size: 16px; }
+        .font-italic { font-style: italic; font-size: 16px; color: #e74c3c; }
+        .font-bold { font-weight: bold; font-size: 16px; color: #3498db; }
+        
+        .demo-box { background: #f8f9fa; padding: 15px; margin: 15px 0; border-radius: 5px; }
+        .code { background: #2c3e50; color: #00b894; padding: 10px; font-family: monospace; border-radius: 3px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>CSS Properties Demo</h1>
+            <p>Student: Pranjal Prateek | Branch: IT-C | College: NIET</p>
+        </div>
+
+        <div class="demo-box">
+            <h2>Color Property</h2>
+            <div class="color-red">Red text with light red background</div>
+            <div class="color-blue">Blue text with light blue background</div>
+            <div class="color-green">Green text with light green background</div>
+            <div class="code">.color-red { color: #e74c3c; background: #ffebee; }</div>
+        </div>
+
+        <div class="demo-box">
+            <h2>Border Property</h2>
+            <div class="border-solid">Solid border example</div>
+            <div class="border-dashed">Dashed border example</div>
+            <div class="border-dotted">Dotted border example</div>
+            <div class="code">.border-solid { border: 3px solid #e74c3c; }</div>
+        </div>
+
+        <div class="demo-box">
+            <h2>Margin Property</h2>
+            <div class="margin-small">Small margin (10px)</div>
+            <div class="margin-large">Large margin (30px)</div>
+            <div class="code">.margin-small { margin: 10px; }</div>
+        </div>
+
+        <div class="demo-box">
+            <h2>Font-Style Property</h2>
+            <p class="font-normal">Normal font style</p>
+            <p class="font-italic">Italic font style</p>
+            <p class="font-bold">Bold font weight</p>
+            <div class="code">.font-italic { font-style: italic; }</div>
+        </div>
+    </div>
+</body>
+</html>

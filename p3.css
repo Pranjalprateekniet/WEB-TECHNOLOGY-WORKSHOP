@@ -1,0 +1,46 @@
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 20px; 
+    background: #f8f9fa; 
+}
+
+.container { 
+    background: white; 
+    padding: 20px; 
+    border-radius: 8px; 
+    max-width: 600px; 
+    margin: 0 auto; 
+}
+
+.header { 
+    text-align: center; 
+    border-bottom: 2px solid #3498db; 
+    padding-bottom: 15px; 
+    margin-bottom: 20px; 
+}
+
+.section { 
+    margin: 15px 0; 
+}
+
+.contact { 
+    display: flex; 
+    justify-content: center; 
+    gap: 15px; 
+    font-size: 14px; 
+}
+
+h1 { 
+    color: #2c3e50; 
+    margin: 0; 
+}
+
+h2 { 
+    color: #e74c3c; 
+    border-bottom: 1px solid #ecf0f1; 
+    padding-bottom: 5px; 
+}
+
+ul { 
+    padding-left: 20px; 
+}

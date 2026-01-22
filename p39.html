@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Box Model</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #f4f4f4; }
+        .container { background: white; padding: 20px; border-radius: 8px; max-width: 800px; margin: 0 auto; }
+        .header { background: #667eea; color: white; padding: 15px; text-align: center; border-radius: 5px; margin-bottom: 20px; }
+        
+        /* Box Model Demonstration */
+        .box-model-demo { background: #3498db; color: white; padding: 20px; margin: 30px; border: 10px solid #e74c3c; border-radius: 10px; text-align: center; font-weight: bold; }
+        
+        /* Individual Components */
+        .content-demo { background: #9b59b6; color: white; width: 200px; height: 100px; display: flex; align-items: center; justify-content: center; margin: 20px auto; border-radius: 5px; }
+        .padding-demo { background: #27ae60; color: white; padding: 25px; margin: 20px; text-align: center; border-radius: 5px; }
+        .border-demo { background: #e74c3c; color: white; border: 15px solid #c0392b; padding: 15px; margin: 20px; text-align: center; border-radius: 5px; }
+        .margin-demo { background: #f39c12; color: white; margin: 30px; padding: 15px; text-align: center; border-radius: 5px; }
+        
+        /* Box Sizing Examples */
+        .content-box { box-sizing: content-box; width: 200px; padding: 20px; border: 5px solid #3498db; margin: 15px; background: #e3f2fd; text-align: center; }
+        .border-box { box-sizing: border-box; width: 200px; padding: 20px; border: 5px solid #e74c3c; margin: 15px; background: #ffebee; text-align: center; }
+        
+        /* Interactive Box */
+        .interactive-box { background: #fff3e0; border: 3px solid #ff9800; padding: 20px; margin: 20px auto; width: 250px; text-align: center; transition: all 0.3s ease; cursor: pointer; border-radius: 8px; }
+        .interactive-box:hover { margin: 30px auto; padding: 30px; border-width: 5px; background: #e8f5e9; border-color: #4caf50; }
+        
+        .demo-section { margin: 25px 0; padding: 15px; background: #f8f9fa; border-radius: 5px; border-left: 4px solid #3498db; }
+        .code { background: #2c3e50; color: #00b894; padding: 10px; font-family: monospace; border-radius: 3px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>CSS Box Model</h1>
+            <p>Student: Pranjal Prateek | Branch: IT-C | College: NIET</p>
+        </div>
+
+        <div class="demo-section">
+            <h2>Box Model Components</h2>
+            <p>Every element consists of: <strong>Content → Padding → Border → Margin</strong></p>
+            
+            <div class="box-model-demo">
+                Content with Padding, Border, and Margin
+            </div>
+            
+            <div class="code">
+.box-model-demo {
+    background: #3498db;    /* Content area */
+    padding: 20px;          /* Space inside element */
+    border: 10px solid #e74c3c;  /* Border around padding */
+    margin: 30px;           /* Space outside element */
+}
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>Individual Components</h2>
+            
+            <div class="content-demo">CONTENT<br>200px × 100px</div>
+            <div class="padding-demo">PADDING - 25px all sides</div>
+            <div class="border-demo">BORDER - 15px solid border</div>
+            <div class="margin-demo">MARGIN - 30px all sides</div>
+            
+            <div class="code">
+.content-demo { width: 200px; height: 100px; }
+.padding-demo { padding: 25px; }
+.border-demo { border: 15px solid #c0392b; }
+.margin-demo { margin: 30px; }
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>Box-Sizing Property</h2>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <div>
+                    <h4>content-box (default)</h4>
+                    <div class="content-box">
+                        Width: 200px<br>
+                        + Padding: 40px<br>
+                        + Border: 10px<br>
+                        = Total: 250px
+                    </div>
+                </div>
+                
+                <div>
+                    <h4>border-box</h4>
+                    <div class="border-box">
+                        Width: 200px<br>
+                        (includes padding<br>
+                        and border)<br>
+                        = Total: 200px
+                    </div>
+                </div>
+            </div>
+            
+            <div class="code">
+.content-box { box-sizing: content-box; width: 200px; }  /* Total: 250px */
+.border-box { box-sizing: border-box; width: 200px; }    /* Total: 200px */
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>Interactive Box Model</h2>
+            <p>Hover over the box to see properties change:</p>
+            
+            <div class="interactive-box">
+                <strong>Hover over me!</strong><br>
+                Watch margin, padding, and border change
+            </div>
+            
+            <div class="code">
+.interactive-box:hover {
+    margin: 30px auto;      /* Increased margin */
+    padding: 30px;          /* Increased padding */
+    border-width: 5px;      /* Thicker border */
+}
+            </div>
+        </div>
+
+        <div style="background: #e8f5e9; padding: 15px; border-radius: 5px; margin-top: 20px;">
+            <h3>Box Model Calculation:</h3>
+            <p><strong>Total Width = Content Width + Padding + Border + Margin</strong></p>
+            <p>Example: 200px + 40px + 10px + 60px = 310px total space</p>
+        </div>
+    </div>
+</body>
+</html>

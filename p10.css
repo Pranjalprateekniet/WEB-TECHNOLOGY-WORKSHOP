@@ -1,0 +1,129 @@
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 20px; 
+    background: #f8f9fa; 
+}
+
+.container { 
+    background: white; 
+    padding: 20px; 
+    border-radius: 8px; 
+    max-width: 900px; 
+    margin: 0 auto; 
+}
+
+.header { 
+    text-align: center; 
+    background: linear-gradient(45deg, #3498db, #2980b9); 
+    color: white; 
+    padding: 20px; 
+    border-radius: 10px; 
+    margin-bottom: 20px; 
+}
+
+h1 { 
+    color: #2c3e50; 
+    font-family: 'Georgia', serif; 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); 
+}
+
+h2 { 
+    color: #e74c3c; 
+    font-family: 'Verdana', sans-serif; 
+    border-bottom: 2px solid #e74c3c; 
+    padding-bottom: 5px; 
+}
+
+h3 { 
+    color: #3498db; 
+    font-family: 'Times New Roman', serif; 
+}
+
+h4 { 
+    color: #9b59b6; 
+    font-family: 'Courier New', monospace; 
+}
+
+.html-keyword { 
+    background-color: #ff6b6b; 
+    color: white; 
+    padding: 2px 6px; 
+    border-radius: 3px; 
+    font-weight: bold; 
+}
+
+.css-keyword { 
+    background-color: #4ecdc4; 
+    color: white; 
+    padding: 2px 6px; 
+    border-radius: 3px; 
+    font-weight: bold; 
+}
+
+.js-keyword { 
+    background-color: #45b7d1; 
+    color: white; 
+    padding: 2px 6px; 
+    border-radius: 3px; 
+    font-weight: bold; 
+}
+
+.web-keyword { 
+    background-color: #96ceb4; 
+    color: white; 
+    padding: 2px 6px; 
+    border-radius: 3px; 
+    font-weight: bold; 
+}
+
+.italic-text { 
+    font-style: italic; 
+    color: #8e44ad; 
+}
+
+.underline-text { 
+    text-decoration: underline; 
+    color: #e67e22; 
+}
+
+.bold-text { 
+    font-weight: bold; 
+    color: #c0392b; 
+}
+
+.georgia-font { 
+    font-family: 'Georgia', serif; 
+    color: #2c3e50; 
+}
+
+.courier-font { 
+    font-family: 'Courier New', monospace; 
+    background-color: #ecf0f1; 
+    padding: 2px 4px; 
+}
+
+.student-info { 
+    background: linear-gradient(45deg, #667eea, #764ba2); 
+    color: white; 
+    padding: 15px; 
+    border-radius: 10px; 
+    margin-bottom: 20px; 
+    text-align: center; 
+}
+
+.section { 
+    margin: 20px 0; 
+    padding: 15px; 
+    background: #f8f9fa; 
+    border-radius: 8px; 
+    border-left: 4px solid #3498db; 
+}
+
+.code-section { 
+    background: #2c3e50; 
+    color: #ecf0f1; 
+    padding: 15px; 
+    border-radius: 5px; 
+    font-family: 'Courier New', monospace; 
+    margin: 15px 0; 
+}

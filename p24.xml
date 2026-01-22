@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE student_system SYSTEM "p23.dtd">
+<!-- XML Document using DTD -->
+<!-- Student: Pranjal Prateek | Branch: IT-C | College: NIET -->
+
+<student_system version="1.0" created_date="2024-01-22">
+    
+    <student_info last_updated="2024-01-22">
+        <name>Pranjal Prateek</name>
+        <student_id>NIET2024IT001</student_id>
+        <branch>IT-C</branch>
+        <semester>4</semester>
+        <cgpa>8.5</cgpa>
+    </student_info>
+    
+    <academic_info>
+        <college>&college_name;</college>
+        
+        <course_list>
+            <course type="theory_lab" semester="4">
+                <course_name>Web Technology</course_name>
+                <course_code>&web_tech_code;</course_code>
+                <credits>4</credits>
+                <instructor>Dr. Rajesh Kumar</instructor>
+            </course>
+            
+            <course type="theory_lab" semester="4">
+                <course_name>Database Management Systems</course_name>
+                <course_code>&db_code;</course_code>
+                <credits>4</credits>
+                <instructor>Prof. Anita Sharma</instructor>
+            </course>
+            
+            <course type="theory" semester="4">
+                <course_name>Computer Networks</course_name>
+                <course_code>&networks_code;</course_code>
+                <credits>3</credits>
+                <instructor>Dr. Vikash Singh</instructor>
+            </course>
+        </course_list>
+        
+        <enrollment_details>
+            <admission_year>&current_year;</admission_year>
+            <expected_graduation>2028</expected_graduation>
+            <status>Active</status>
+        </enrollment_details>
+    </academic_info>
+    
+    <contact_info>
+        <email>pranjal.prateek@niet.co.in</email>
+        <phone>+91-9876543210</phone>
+        <address>
+            <hostel>&college_short; Boys Hostel</hostel>
+            <room>A-205</room>
+            <city>Greater Noida</city>
+            <state>Uttar Pradesh</state>
+            <country>India</country>
+        </address>
+    </contact_info>
+    
+    <projects>
+        <project priority="high" completion_percentage="60">
+            <title>Student Management System</title>
+            <description>Web-based system for managing student information and academic records</description>
+            <technologies>HTML5, CSS3, JavaScript, MySQL, PHP</technologies>
+            <start_date>2024-01-10</start_date>
+            <status>In Progress</status>
+        </project>
+        
+        <project priority="medium" completion_percentage="100">
+            <title>Personal Portfolio Website</title>
+            <description>Responsive portfolio website showcasing academic projects and skills</description>
+            <technologies>HTML5, CSS3, JavaScript, Bootstrap</technologies>
+            <start_date>2023-12-01</start_date>
+            <status>Completed</status>
+        </project>
+        
+        <project priority="low" completion_percentage="25">
+            <title>College Event Management</title>
+            <description>System for managing college events and student registrations</description>
+            <technologies>HTML, CSS, JavaScript, Node.js, MongoDB</technologies>
+            <start_date>2024-01-20</start_date>
+            <status>Planning</status>
+        </project>
+    </projects>
+    
+</student_system>

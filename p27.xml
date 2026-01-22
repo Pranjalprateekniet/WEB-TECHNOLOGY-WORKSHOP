@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- XML Document using XSD Schema -->
+<!-- Student: Pranjal Prateek | Branch: IT-C | College: NIET -->
+
+<student_management_system xmlns="http://niet.edu/student"
+                          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                          xsi:schemaLocation="http://niet.edu/student p26.xsd"
+                          version="1.0"
+                          created_date="2024-01-22">
+    
+    <system_info>
+        <college_name>NIET</college_name>
+        <location>Greater Noida, Uttar Pradesh</location>
+        <academic_year>2024-25</academic_year>
+        <semester>4</semester>
+    </system_info>
+    
+    <students>
+        <student id="STU001" status="active">
+            <personal_info>
+                <name>Pranjal Prateek</name>
+                <student_id>NIET2024IT001</student_id>
+                <branch>IT-C</branch>
+                <section>C</section>
+            </personal_info>
+            
+            <academic_info>
+                <current_semester>4</current_semester>
+                <cgpa>8.50</cgpa>
+                <admission_year>2024</admission_year>
+                <expected_graduation>2028</expected_graduation>
+            </academic_info>
+            
+            <contact_info>
+                <email>pranjal.prateek@niet.co.in</email>
+                <phone>+91-9876543210</phone>
+                <address>NIET Boys Hostel, Room A-205, Greater Noida</address>
+            </contact_info>
+            
+            <projects>
+                <project priority="high">
+                    <title>Student Management System</title>
+                    <description>Web-based system for managing student information and academic records</description>
+                    <technologies>HTML5, CSS3, JavaScript, MySQL, PHP</technologies>
+                    <start_date>2024-01-10</start_date>
+                    <status>in_progress</status>
+                </project>
+                
+                <project priority="medium">
+                    <title>Personal Portfolio Website</title>
+                    <description>Responsive portfolio website showcasing academic projects</description>
+                    <technologies>HTML5, CSS3, JavaScript, Bootstrap</technologies>
+                    <start_date>2023-12-01</start_date>
+                    <status>completed</status>
+                </project>
+            </projects>
+        </student>
+        
+        <student id="STU002" status="active">
+            <personal_info>
+                <name>Rahul Sharma</name>
+                <student_id>NIET2024IT002</student_id>
+                <branch>IT-C</branch>
+                <section>C</section>
+            </personal_info>
+            
+            <academic_info>
+                <current_semester>4</current_semester>
+                <cgpa>7.80</cgpa>
+                <admission_year>2024</admission_year>
+                <expected_graduation>2028</expected_graduation>
+            </academic_info>
+            
+            <contact_info>
+                <email>rahul.sharma@niet.co.in</email>
+                <phone>+91-9876543211</phone>
+                <address>Local Student, Greater Noida</address>
+            </contact_info>
+            
+            <projects>
+                <project priority="medium">
+                    <title>E-Commerce Website</title>
+                    <description>Online shopping platform with payment integration</description>
+                    <technologies>HTML, CSS, JavaScript, Node.js, MongoDB</technologies>
+                    <start_date>2024-01-15</start_date>
+                    <status>planning</status>
+                </project>
+            </projects>
+        </student>
+    </students>
+    
+    <courses>
+        <course semester="4">
+            <name>Web Technology</name>
+            <code>CS401</code>
+            <credits>4</credits>
+            <instructor>Dr. Rajesh Kumar</instructor>
+            <type>Theory + Lab</type>
+        </course>
+        
+        <course semester="4">
+            <name>Database Management Systems</name>
+            <code>CS402</code>
+            <credits>4</credits>
+            <instructor>Prof. Anita Sharma</instructor>
+            <type>Theory + Lab</type>
+        </course>
+        
+        <course semester="4">
+            <name>Computer Networks</name>
+            <code>CS403</code>
+            <credits>3</credits>
+            <instructor>Dr. Vikash Singh</instructor>
+            <type>Theory</type>
+        </course>
+        
+        <course semester="4">
+            <name>Software Engineering</name>
+            <code>CS404</code>
+            <credits>3</credits>
+            <instructor>Prof. Meera Gupta</instructor>
+            <type>Theory</type>
+        </course>
+    </courses>
+    
+</student_management_system>

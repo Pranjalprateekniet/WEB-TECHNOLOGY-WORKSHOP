@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Table Styling - Even and Odd Cells</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #f4f4f4; }
+        .container { background: white; padding: 20px; border-radius: 8px; max-width: 800px; margin: 0 auto; }
+        .header { background: #00b894; color: white; padding: 15px; text-align: center; border-radius: 5px; margin-bottom: 20px; }
+        
+        /* Basic table styling */
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        th { background: #3498db; color: white; padding: 12px; text-align: left; font-weight: bold; }
+        td { padding: 10px; border-bottom: 1px solid #ddd; }
+        
+        /* Even and Odd row styling */
+        .striped-table tr:nth-child(even) { background-color: #f8f9fa; }
+        .striped-table tr:nth-child(odd) { background-color: #ffffff; }
+        
+        /* Advanced even/odd styling */
+        .advanced-table tbody tr:nth-child(even) { background: #e8f5e9; color: #2e7d32; font-weight: bold; }
+        .advanced-table tbody tr:nth-child(odd) { background: #e3f2fd; color: #1565c0; }
+        .advanced-table tbody tr:hover { background: #fff3e0 !important; color: #ef6c00; }
+        
+        /* Column-based styling */
+        .column-table td:nth-child(even) { background-color: #fef9e7; }
+        .column-table td:nth-child(odd) { background-color: #f3e5f5; }
+        
+        .demo-section { margin: 25px 0; }
+        .code { background: #2c3e50; color: #00b894; padding: 10px; font-family: monospace; border-radius: 3px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>CSS Table Styling: Even and Odd Cells</h1>
+            <p>Student: Pranjal Prateek | Branch: IT-C | College: NIET</p>
+        </div>
+
+        <div class="demo-section">
+            <h2>Striped Rows (Even/Odd)</h2>
+            <table class="striped-table">
+                <thead>
+                    <tr><th>Student ID</th><th>Name</th><th>Branch</th><th>CGPA</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>2024IT001</td><td>Pranjal Prateek</td><td>IT-C</td><td>8.5</td></tr>
+                    <tr><td>2024IT002</td><td>Rahul Sharma</td><td>IT-C</td><td>7.8</td></tr>
+                    <tr><td>2024IT003</td><td>Priya Singh</td><td>IT-C</td><td>9.2</td></tr>
+                    <tr><td>2024IT004</td><td>Amit Kumar</td><td>IT-C</td><td>8.1</td></tr>
+                </tbody>
+            </table>
+            <div class="code">
+.striped-table tr:nth-child(even) { background-color: #f8f9fa; }
+.striped-table tr:nth-child(odd) { background-color: #ffffff; }
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>Advanced Even/Odd with Hover</h2>
+            <table class="advanced-table">
+                <thead>
+                    <tr><th>Subject</th><th>Internal</th><th>External</th><th>Total</th><th>Grade</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Web Technology</td><td>30</td><td>68</td><td>98</td><td>A+</td></tr>
+                    <tr><td>Database Systems</td><td>27</td><td>63</td><td>90</td><td>A+</td></tr>
+                    <tr><td>Computer Networks</td><td>25</td><td>58</td><td>83</td><td>A</td></tr>
+                    <tr><td>Software Engineering</td><td>28</td><td>65</td><td>93</td><td>A+</td></tr>
+                </tbody>
+            </table>
+            <div class="code">
+.advanced-table tbody tr:nth-child(even) { background: #e8f5e9; color: #2e7d32; }
+.advanced-table tbody tr:nth-child(odd) { background: #e3f2fd; color: #1565c0; }
+.advanced-table tbody tr:hover { background: #fff3e0 !important; }
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>Column-based Even/Odd</h2>
+            <table class="column-table">
+                <thead>
+                    <tr><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Web Tech</td><td>Database</td><td>Networks</td><td>Software</td><td>OS</td></tr>
+                    <tr><td>9-11 AM</td><td>11-1 PM</td><td>2-4 PM</td><td>9-11 AM</td><td>11-1 PM</td></tr>
+                </tbody>
+            </table>
+            <div class="code">
+.column-table td:nth-child(even) { background-color: #fef9e7; }
+.column-table td:nth-child(odd) { background-color: #f3e5f5; }
+            </div>
+        </div>
+
+        <div style="background: #e8f5e9; padding: 15px; border-radius: 5px;">
+            <h3>nth-child Selectors:</h3>
+            <ul>
+                <li><strong>:nth-child(even)</strong> - 2nd, 4th, 6th elements</li>
+                <li><strong>:nth-child(odd)</strong> - 1st, 3rd, 5th elements</li>
+                <li><strong>:nth-child(3n)</strong> - Every 3rd element</li>
+                <li><strong>:hover</strong> - Interactive hover effects</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

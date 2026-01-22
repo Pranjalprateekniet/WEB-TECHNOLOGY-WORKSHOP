@@ -1,0 +1,74 @@
+<!-- External DTD for College Management System -->
+<!-- Student: Pranjal Prateek | Branch: IT-C | College: NIET -->
+
+<!ELEMENT college_system (college_info, departments, students, courses, facilities)>
+
+<!ELEMENT college_info (name, full_name, location, established, affiliation, type)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT full_name (#PCDATA)>
+<!ELEMENT location (#PCDATA)>
+<!ELEMENT established (#PCDATA)>
+<!ELEMENT affiliation (#PCDATA)>
+<!ELEMENT type (#PCDATA)>
+
+<!ELEMENT departments (department+)>
+<!ELEMENT department (dept_name, dept_code, head, faculty_count, student_count)>
+<!ELEMENT dept_name (#PCDATA)>
+<!ELEMENT dept_code (#PCDATA)>
+<!ELEMENT head (#PCDATA)>
+<!ELEMENT faculty_count (#PCDATA)>
+<!ELEMENT student_count (#PCDATA)>
+
+<!ELEMENT students (student+)>
+<!ELEMENT student (student_name, student_id, branch, semester, cgpa, contact)>
+<!ELEMENT student_name (#PCDATA)>
+<!ELEMENT student_id (#PCDATA)>
+<!ELEMENT branch (#PCDATA)>
+<!ELEMENT semester (#PCDATA)>
+<!ELEMENT cgpa (#PCDATA)>
+<!ELEMENT contact (email, phone)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT phone (#PCDATA)>
+
+<!ELEMENT courses (course+)>
+<!ELEMENT course (course_name, course_code, credits, instructor, course_type)>
+<!ELEMENT course_name (#PCDATA)>
+<!ELEMENT course_code (#PCDATA)>
+<!ELEMENT credits (#PCDATA)>
+<!ELEMENT instructor (#PCDATA)>
+<!ELEMENT course_type (#PCDATA)>
+
+<!ELEMENT facilities (facility+)>
+<!ELEMENT facility (facility_name, capacity, description)>
+<!ELEMENT facility_name (#PCDATA)>
+<!ELEMENT capacity (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+
+<!-- Attribute Lists -->
+<!ATTLIST college_system 
+    version CDATA #REQUIRED
+    last_updated CDATA #REQUIRED>
+
+<!ATTLIST department 
+    id ID #REQUIRED
+    established CDATA #IMPLIED>
+
+<!ATTLIST student 
+    id ID #REQUIRED
+    status (active|inactive|graduated) #REQUIRED
+    admission_year CDATA #REQUIRED>
+
+<!ATTLIST course 
+    semester CDATA #REQUIRED
+    department IDREF #REQUIRED>
+
+<!ATTLIST facility 
+    type (academic|residential|recreational) #REQUIRED
+    availability (24x7|business_hours|scheduled) #IMPLIED>
+
+<!-- Entities -->
+<!ENTITY college_full "Noida Institute of Engineering and Technology">
+<!ENTITY college_short "NIET">
+<!ENTITY college_location "Greater Noida, UP">
+<!ENTITY current_academic_year "2024-25">
+<!ENTITY affiliation_university "AKTU")

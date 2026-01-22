@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- XML with Attributes Demo -->
+<!-- Student: Pranjal Prateek | Branch: IT-C | College: NIET -->
+
+<college_database>
+    <college name="NIET" 
+             location="Greater Noida" 
+             established="1999" 
+             type="Private Engineering College"
+             affiliation="AKTU">
+        
+        <departments>
+            <department name="Information Technology" 
+                       code="IT" 
+                       head="Dr. Rajesh Kumar"
+                       students="120"
+                       faculty="15">
+                
+                <courses>
+                    <course name="Web Technology" 
+                           code="CS401" 
+                           credits="4" 
+                           semester="4"
+                           type="Theory+Lab"
+                           instructor="Dr. Rajesh Kumar"/>
+                    
+                    <course name="Database Management" 
+                           code="CS402" 
+                           credits="4" 
+                           semester="4"
+                           type="Theory+Lab"
+                           instructor="Prof. Anita Sharma"/>
+                    
+                    <course name="Computer Networks" 
+                           code="CS403" 
+                           credits="3" 
+                           semester="4"
+                           type="Theory"
+                           instructor="Dr. Vikash Singh"/>
+                </courses>
+                
+                <students>
+                    <student id="NIET2024IT001" 
+                            name="Pranjal Prateek" 
+                            section="IT-C"
+                            semester="4"
+                            cgpa="8.5"
+                            status="Active">
+                        
+                        <contact email="pranjal.prateek@niet.co.in" 
+                                phone="+91-9876543210"
+                                address="NIET Hostel A-205"/>
+                        
+                        <enrollment_details admission_year="2024" 
+                                          expected_graduation="2028"
+                                          fee_status="Paid"/>
+                    </student>
+                    
+                    <student id="NIET2024IT002" 
+                            name="Rahul Sharma" 
+                            section="IT-C"
+                            semester="4"
+                            cgpa="7.8"
+                            status="Active">
+                        
+                        <contact email="rahul.sharma@niet.co.in" 
+                                phone="+91-9876543211"
+                                address="Local Student"/>
+                        
+                        <enrollment_details admission_year="2024" 
+                                          expected_graduation="2028"
+                                          fee_status="Paid"/>
+                    </student>
+                </students>
+            </department>
+        </departments>
+        
+        <facilities>
+            <facility name="Computer Lab" 
+                     capacity="60" 
+                     equipment="Latest PCs"
+                     availability="24x7"/>
+            
+            <facility name="Library" 
+                     capacity="500" 
+                     books="50000+"
+                     digital_access="Yes"/>
+            
+            <facility name="Hostel" 
+                     capacity="1000" 
+                     type="Boys and Girls"
+                     wifi="Available"/>
+        </facilities>
+        
+        <events>
+            <event name="Tech Fest 2024" 
+                  date="2024-03-15" 
+                  type="Technical"
+                  duration="3 days"
+                  participants="500+"/>
+            
+            <event name="Web Development Workshop" 
+                  date="2024-02-10" 
+                  type="Educational"
+                  duration="1 day"
+                  participants="100"/>
+        </events>
+    </college>
+    
+    <!-- Document Information -->
+    <metadata created="2024-01-22" 
+             author="Pranjal Prateek"
+             purpose="XML Attributes Demonstration"
+             version="1.0"
+             encoding="UTF-8"/>
+</college_database>

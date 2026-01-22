@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Input Types Demo</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%); 
+            margin: 0; 
+            padding: 20px; 
+            min-height: 100vh;
+        }
+        .container { 
+            max-width: 800px; 
+            margin: 0 auto; 
+            background-color: white; 
+            padding: 30px; 
+            border-radius: 15px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        h1 { 
+            color: #2d3436; 
+            text-align: center; 
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+        .student-info { 
+            background: linear-gradient(45deg, #00b894, #00a085); 
+            color: white; 
+            padding: 15px; 
+            border-radius: 10px; 
+            margin-bottom: 25px; 
+            text-align: center;
+        }
+        .input-section { 
+            margin: 25px 0; 
+            padding: 20px; 
+            background-color: #f8f9fa; 
+            border-radius: 10px; 
+            border-left: 5px solid #74b9ff;
+        }
+        .input-group { 
+            margin: 15px 0; 
+        }
+        label { 
+            display: block; 
+            margin-bottom: 8px; 
+            font-weight: bold; 
+            color: #2d3436;
+            font-size: 14px;
+        }
+        input, select { 
+            width: 100%; 
+            padding: 12px; 
+            border: 2px solid #ddd; 
+            border-radius: 8px; 
+            font-size: 16px; 
+            transition: all 0.3s;
+            box-sizing: border-box;
+        }
+        input:focus, select:focus { 
+            outline: none; 
+            border-color: #74b9ff; 
+            box-shadow: 0 0 8px rgba(116, 185, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        .demo-btn { 
+            background: linear-gradient(45deg, #fd79a8, #e84393); 
+            color: white; 
+            padding: 12px 25px; 
+            border: none; 
+            border-radius: 8px; 
+            font-size: 16px; 
+            font-weight: bold; 
+            cursor: pointer; 
+            margin: 10px 5px;
+            transition: all 0.3s;
+        }
+        .demo-btn:hover { 
+            transform: translateY(-2px); 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .output-area { 
+            background-color: #2d3436; 
+            color: #00b894; 
+            padding: 15px; 
+            border-radius: 8px; 
+            font-family: 'Courier New', monospace; 
+            margin-top: 20px;
+            min-height: 100px;
+        }
+        .feature-highlight { 
+            background: linear-gradient(45deg, #fdcb6e, #e17055); 
+            color: white; 
+            padding: 3px 8px; 
+            border-radius: 4px; 
+            font-weight: bold;
+        }
+        .input-description {
+            font-size: 13px;
+            color: #636e72;
+            margin-top: 5px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>HTML5 Input Types Demonstration</h1>
+        
+        <div class="student-info">
+            <strong>HTML5 Features Demo</strong><br>
+            Student: Pranjal Prateek | Branch: IT-C | Subject: Web Technology | College: NIET
+        </div>
+
+        <form id="html5Form">
+            <div class="input-section">
+                <h2>📅 Date and Time Inputs</h2>
+                
+                <div class="input-group">
+                    <label for="dateInput">Date Input <span class="feature-highlight">HTML5</span></label>
+                    <input type="date" id="dateInput" name="date" value="2024-01-15">
+                    <div class="input-description">Select a date using the built-in date picker</div>
+                </div>
+
+                <div class="input-group">
+                    <label for="datetimeInput">DateTime-Local Input <span class="feature-highlight">HTML5</span></label>
+                    <input type="datetime-local" id="datetimeInput" name="datetime">
+                    <div class="input-description">Select both date and time</div>
+                </div>
+
+                <div class="input-group">
+                    <label for="timeInput">Time Input <span class="feature-highlight">HTML5</span></label>
+                    <input type="time" id="timeInput" name="time" value="14:30">
+                    <div class="input-description">Select time in 24-hour format</div>
+                </div>
+            </div>
+
+            <div class="input-section">
+                <h2>🔢 Number and Range Inputs</h2>
+                
+                <div class="input-group">
+                    <label for="numberInput">Number Input <span class="feature-highlight">HTML5</span></label>
+                    <input type="number" id="numberInput" name="number" min="1" max="100" step="1" value="50" placeholder="Enter a number between 1-100">
+                    <div class="input-description">Numeric input with min/max validation and step control</div>
+                </div>
+
+                <div class="input-group">
+                    <label for="rangeInput">Range Slider <span class="feature-highlight">HTML5</span></label>
+                    <input type="range" id="rangeInput" name="range" min="0" max="100" step="5" value="75" oninput="updateRangeValue(this.value)">
+                    <div class="input-description">Current value: <span id="rangeValue">75</span> - Drag to change</div>
+                </div>
+            </div>
+
+            <div class="input-section">
+                <h2>📧 Email and Search Inputs</h2>
+                
+                <div class="input-group">
+                    <label for="emailInput">Email Input <span class="feature-highlight">HTML5</span></label>
+                    <input type="email" id="emailInput" name="email" placeholder="pranjal.prateek@niet.co.in">
+                    <div class="input-description">Automatic email validation and mobile keyboard optimization</div>
+                </div>
+
+                <div class="input-group">
+                    <label for="searchInput">Search Input <span class="feature-highlight">HTML5</span></label>
+                    <input type="search" id="searchInput" name="search" placeholder="Search web technology topics...">
+                    <div class="input-description">Search field with clear button and optimized styling</div>
+                </div>
+            </div>
+
+            <div class="input-section">
+                <h2>📋 Data List (Autocomplete)</h2>
+                
+                <div class="input-group">
+                    <label for="subjectInput">Favorite Subject <span class="feature-highlight">HTML5</span></label>
+                    <input type="text" id="subjectInput" name="subject" list="subjects" placeholder="Choose or type a subject">
+                    <datalist id="subjects">
+                        <option value="Web Technology">
+                        <option value="Data Structures">
+                        <option value="Database Management">
+                        <option value="Computer Networks">
+                        <option value="Software Engineering">
+                        <option value="Operating Systems">
+                        <option value="Machine Learning">
+                        <option value="Artificial Intelligence">
+                        <option value="Mobile App Development">
+                        <option value="Cybersecurity">
+                    </datalist>
+                    <div class="input-description">Start typing to see autocomplete suggestions</div>
+                </div>
+
+                <div class="input-group">
+                    <label for="collegeInput">College/University <span class="feature-highlight">HTML5</span></label>
+                    <input type="text" id="collegeInput" name="college" list="colleges" placeholder="Select your college" value="NIET">
+                    <datalist id="colleges">
+                        <option value="NIET - Noida Institute of Engineering & Technology">
+                        <option value="IIT Delhi">
+                        <option value="IIT Bombay">
+                        <option value="NIT Allahabad">
+                        <option value="DTU Delhi">
+                        <option value="NSIT Delhi">
+                        <option value="Jamia Millia Islamia">
+                        <option value="Amity University">
+                    </datalist>
+                    <div class="input-description">Predefined list with custom input option</div>
+                </div>
+            </div>
+
+            <div class="input-section">
+                <h2>🌐 Additional HTML5 Inputs</h2>
+                
+                <div class="input-group">
+                    <label for="urlInput">Website URL <span class="feature-highlight">HTML5</span></label>
+                    <input type="url" id="urlInput" name="url" placeholder="https://www.niet.co.in">
+                    <div class="input-description">URL validation and mobile keyboard optimization</div>
+                </div>
+
+                <div class="input-group">
+                    <label for="telInput">Phone Number <span class="feature-highlight">HTML5</span></label>
+                    <input type="tel" id="telInput" name="tel" placeholder="+91-9876543210">
+                    <div class="input-description">Telephone input with numeric keypad on mobile</div>
+                </div>
+
+                <div class="input-group">
+                    <label for="colorInput">Favorite Color <span class="feature-highlight">HTML5</span></label>
+                    <input type="color" id="colorInput" name="color" value="#74b9ff">
+                    <div class="input-description">Color picker with hex value output</div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin: 30px 0;">
+                <button type="button" class="demo-btn" onclick="showFormData()">📊 Show Form Data</button>
+                <button type="button" class="demo-btn" onclick="validateForm()">✅ Validate Form</button>
+                <button type="reset" class="demo-btn" onclick="resetForm()">🔄 Reset Form</button>
+            </div>
+        </form>
+
+        <div class="output-area" id="outputArea">
+            <strong>Form Output:</strong><br>
+            Fill out the form above and click "Show Form Data" to see the values here.<br><br>
+            <em>This demonstrates HTML5 input types with built-in validation and enhanced user experience.</em>
+        </div>
+
+        <div style="margin-top: 30px; padding: 20px; background-color: #dfe6e9; border-radius: 10px;">
+            <h3 style="color: #2d3436; margin-top: 0;">HTML5 Input Features:</h3>
+            <ul style="color: #636e72; line-height: 1.8;">
+                <li><strong>Built-in Validation:</strong> Email, URL, number range validation</li>
+                <li><strong>Mobile Optimization:</strong> Appropriate keyboards for different input types</li>
+                <li><strong>Date/Time Pickers:</strong> Native date and time selection widgets</li>
+                <li><strong>Range Sliders:</strong> Interactive range selection with visual feedback</li>
+                <li><strong>Autocomplete:</strong> Datalist provides suggestions while typing</li>
+                <li><strong>Color Picker:</strong> Native color selection interface</li>
+                <li><strong>Search Enhancement:</strong> Search-specific styling and behavior</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function updateRangeValue(value) {
+            document.getElementById('rangeValue').textContent = value;
+        }
+
+        function showFormData() {
+            const form = document.getElementById('html5Form');
+            const formData = new FormData(form);
+            let output = '<strong>Current Form Data:</strong><br><br>';
+            
+            for (let [key, value] of formData.entries()) {
+                if (value) {
+                    output += `<strong>${key}:</strong> ${value}<br>`;
+                }
+            }
+            
+            // Add range value
+            const rangeValue = document.getElementById('rangeInput').value;
+            output += `<strong>range:</strong> ${rangeValue}<br>`;
+            
+            document.getElementById('outputArea').innerHTML = output;
+        }
+
+        function validateForm() {
+            const form = document.getElementById('html5Form');
+            let isValid = true;
+            let output = '<strong>Form Validation Results:</strong><br><br>';
+            
+            // Check email
+            const email = document.getElementById('emailInput');
+            if (email.value && !email.checkValidity()) {
+                output += '❌ Email format is invalid<br>';
+                isValid = false;
+            } else if (email.value) {
+                output += '✅ Email format is valid<br>';
+            }
+            
+            // Check URL
+            const url = document.getElementById('urlInput');
+            if (url.value && !url.checkValidity()) {
+                output += '❌ URL format is invalid<br>';
+                isValid = false;
+            } else if (url.value) {
+                output += '✅ URL format is valid<br>';
+            }
+            
+            // Check number range
+            const number = document.getElementById('numberInput');
+            if (number.value && (number.value < 1 || number.value > 100)) {
+                output += '❌ Number must be between 1 and 100<br>';
+                isValid = false;
+            } else if (number.value) {
+                output += '✅ Number is within valid range<br>';
+            }
+            
+            if (isValid) {
+                output += '<br><strong style="color: #00b894;">✅ All validations passed!</strong>';
+            } else {
+                output += '<br><strong style="color: #e17055;">❌ Please fix validation errors</strong>';
+            }
+            
+            document.getElementById('outputArea').innerHTML = output;
+        }
+
+        function resetForm() {
+            document.getElementById('html5Form').reset();
+            document.getElementById('rangeValue').textContent = '75';
+            document.getElementById('outputArea').innerHTML = 
+                '<strong>Form Output:</strong><br>Form has been reset. Fill out the form and click "Show Form Data" to see values.<br><br><em>Ready for new input!</em>';
+        }
+
+        // Set default datetime value
+        document.addEventListener('DOMContentLoaded', function() {
+            const now = new Date();
+            const datetime = now.toISOString().slice(0, 16);
+            document.getElementById('datetimeInput').value = datetime;
+        });
+    </script>
+</body>
+</html>

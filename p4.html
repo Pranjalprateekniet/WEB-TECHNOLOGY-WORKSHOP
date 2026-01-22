@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document Object Model (DOM)</title>
+</head>
+<body>
+    <h1>Document Object Model (DOM)</h1>
+    <p>Student: Pranjal Prateek | Branch: IT-C | College: NIET</p>
+
+    <div id="root">
+        <h2>Root Element</h2>
+        <div id="parent">
+            <h3>Parent Element</h3>
+            <div id="child1">
+                <p>Child Element 1</p>
+            </div>
+            <div id="child2">
+                <p>Child Element 2</p>
+                <ul>
+                    <li>List Item 1</li>
+                    <li>List Item 2</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <button onclick="highlightParent()">Highlight Parent</button>
+        <button onclick="addElement()">Add Element</button>
+        <button onclick="changeText()">Change Text</button>
+    </div>
+
+    <h3>DOM Manipulation Examples:</h3>
+    <ul>
+        <li><strong>getElementById()</strong> - Select element by ID</li>
+        <li><strong>createElement()</strong> - Create new element</li>
+        <li><strong>appendChild()</strong> - Add child element</li>
+        <li><strong>textContent</strong> - Change text content</li>
+    </ul>
+
+    <script>
+        function highlightParent() {
+            document.getElementById('parent').style.backgroundColor = '#fff3cd';
+        }
+
+        function addElement() {
+            const newDiv = document.createElement('div');
+            newDiv.innerHTML = '<p>Dynamically Added Element</p>';
+            document.getElementById('parent').appendChild(newDiv);
+        }
+
+        function changeText() {
+            document.querySelector('#child1 p').textContent = 'Text Changed via DOM!';
+        }
+    </script>
+</body>
+</html>

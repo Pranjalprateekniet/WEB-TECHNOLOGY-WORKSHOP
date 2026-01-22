@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE college_system SYSTEM "p25_external.dtd">
+<!-- XML Document using External DTD -->
+<!-- Student: Pranjal Prateek | Branch: IT-C | College: NIET -->
+
+<college_system version="2.0" last_updated="2024-01-22">
+    
+    <college_info>
+        <name>&college_short;</name>
+        <full_name>&college_full;</full_name>
+        <location>&college_location;</location>
+        <established>1999</established>
+        <affiliation>&affiliation_university;</affiliation>
+        <type>Private Engineering College</type>
+    </college_info>
+    
+    <departments>
+        <department id="IT_DEPT" established="2000">
+            <dept_name>Information Technology</dept_name>
+            <dept_code>IT</dept_code>
+            <head>Dr. Rajesh Kumar</head>
+            <faculty_count>15</faculty_count>
+            <student_count>120</student_count>
+        </department>
+        
+        <department id="CSE_DEPT" established="1999">
+            <dept_name>Computer Science Engineering</dept_name>
+            <dept_code>CSE</dept_code>
+            <head>Dr. Priya Sharma</head>
+            <faculty_count>20</faculty_count>
+            <student_count>150</student_count>
+        </department>
+    </departments>
+    
+    <students>
+        <student id="STU001" status="active" admission_year="2024">
+            <student_name>Pranjal Prateek</student_name>
+            <student_id>NIET2024IT001</student_id>
+            <branch>IT-C</branch>
+            <semester>4</semester>
+            <cgpa>8.5</cgpa>
+            <contact>
+                <email>pranjal.prateek@niet.co.in</email>
+                <phone>+91-9876543210</phone>
+            </contact>
+        </student>
+        
+        <student id="STU002" status="active" admission_year="2024">
+            <student_name>Rahul Sharma</student_name>
+            <student_id>NIET2024IT002</student_id>
+            <branch>IT-C</branch>
+            <semester>4</semester>
+            <cgpa>7.8</cgpa>
+            <contact>
+                <email>rahul.sharma@niet.co.in</email>
+                <phone>+91-9876543211</phone>
+            </contact>
+        </student>
+    </students>
+    
+    <courses>
+        <course semester="4" department="IT_DEPT">
+            <course_name>Web Technology</course_name>
+            <course_code>CS401</course_code>
+            <credits>4</credits>
+            <instructor>Dr. Rajesh Kumar</instructor>
+            <course_type>Theory + Lab</course_type>
+        </course>
+        
+        <course semester="4" department="IT_DEPT">
+            <course_name>Database Management Systems</course_name>
+            <course_code>CS402</course_code>
+            <credits>4</credits>
+            <instructor>Prof. Anita Sharma</instructor>
+            <course_type>Theory + Lab</course_type>
+        </course>
+        
+        <course semester="4" department="IT_DEPT">
+            <course_name>Computer Networks</course_name>
+            <course_code>CS403</course_code>
+            <credits>3</credits>
+            <instructor>Dr. Vikash Singh</instructor>
+            <course_type>Theory</course_type>
+        </course>
+    </courses>
+    
+    <facilities>
+        <facility type="academic" availability="24x7">
+            <facility_name>Computer Lab</facility_name>
+            <capacity>60</capacity>
+            <description>Modern computer lab with latest hardware and software</description>
+        </facility>
+        
+        <facility type="academic" availability="business_hours">
+            <facility_name>Library</facility_name>
+            <capacity>500</capacity>
+            <description>Central library with 50000+ books and digital resources</description>
+        </facility>
+        
+        <facility type="residential" availability="24x7">
+            <facility_name>Boys Hostel</facility_name>
+            <capacity>500</capacity>
+            <description>Comfortable accommodation with Wi-Fi and mess facilities</description>
+        </facility>
+        
+        <facility type="recreational" availability="scheduled">
+            <facility_name>Sports Complex</facility_name>
+            <capacity>200</capacity>
+            <description>Indoor and outdoor sports facilities for students</description>
+        </facility>
+    </facilities>
+    
+</college_system>

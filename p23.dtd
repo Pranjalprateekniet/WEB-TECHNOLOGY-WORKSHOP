@@ -1,0 +1,68 @@
+<!-- DTD for Student Information System -->
+<!-- Student: Pranjal Prateek | Branch: IT-C | College: NIET -->
+
+<!ELEMENT student_system (student_info, academic_info, contact_info, projects?)>
+
+<!ELEMENT student_info (name, student_id, branch, semester, cgpa)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT student_id (#PCDATA)>
+<!ELEMENT branch (#PCDATA)>
+<!ELEMENT semester (#PCDATA)>
+<!ELEMENT cgpa (#PCDATA)>
+
+<!ELEMENT academic_info (college, course_list, enrollment_details)>
+<!ELEMENT college (#PCDATA)>
+<!ELEMENT course_list (course+)>
+<!ELEMENT course (course_name, course_code, credits, instructor)>
+<!ELEMENT course_name (#PCDATA)>
+<!ELEMENT course_code (#PCDATA)>
+<!ELEMENT credits (#PCDATA)>
+<!ELEMENT instructor (#PCDATA)>
+
+<!ELEMENT enrollment_details (admission_year, expected_graduation, status)>
+<!ELEMENT admission_year (#PCDATA)>
+<!ELEMENT expected_graduation (#PCDATA)>
+<!ELEMENT status (#PCDATA)>
+
+<!ELEMENT contact_info (email, phone, address)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT phone (#PCDATA)>
+<!ELEMENT address (hostel?, room?, city, state, country)>
+<!ELEMENT hostel (#PCDATA)>
+<!ELEMENT room (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT state (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+
+<!ELEMENT projects (project+)>
+<!ELEMENT project (title, description, technologies, start_date, status)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT technologies (#PCDATA)>
+<!ELEMENT start_date (#PCDATA)>
+
+<!-- Attribute Definitions -->
+<!ATTLIST student_system 
+    version CDATA #REQUIRED
+    created_date CDATA #REQUIRED>
+
+<!ATTLIST course 
+    type (theory|lab|theory_lab) #REQUIRED
+    semester CDATA #REQUIRED>
+
+<!ATTLIST project 
+    priority (high|medium|low) #IMPLIED
+    completion_percentage CDATA #IMPLIED>
+
+<!ATTLIST student_info 
+    last_updated CDATA #IMPLIED>
+
+<!-- Entity Definitions -->
+<!ENTITY college_name "Noida Institute of Engineering and Technology">
+<!ENTITY college_short "NIET">
+<!ENTITY location "Greater Noida, Uttar Pradesh">
+<!ENTITY affiliation "AKTU">
+<!ENTITY current_year "2024">
+<!ENTITY web_tech_code "CS401">
+<!ENTITY db_code "CS402">
+<!ENTITY networks_code "CS403")

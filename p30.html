@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple User Input Form</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: linear-gradient(135deg, #74b9ff, #0984e3); min-height: 100vh; }
+        .container { max-width: 600px; margin: 0 auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+        .header { background: linear-gradient(45deg, #00b894, #00a085); color: white; padding: 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 8px; font-weight: bold; color: #2d3436; }
+        input, textarea, select { width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 16px; box-sizing: border-box; }
+        input:focus, textarea:focus, select:focus { border-color: #74b9ff; outline: none; box-shadow: 0 0 8px rgba(116, 185, 255, 0.3); }
+        .submit-btn { background: linear-gradient(45fd, #fd79a8, #e84393); color: white; padding: 15px 30px; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; width: 100%; margin-top: 15px; }
+        .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .required { color: #e74c3c; }
+        .output { background: #2d3436; color: #00b894; padding: 15px; border-radius: 8px; margin-top: 20px; display: none; font-family: monospace; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>User Information Form</h1>
+            <p>Student: Pranjal Prateek | Branch: IT-C | College: NIET</p>
+        </div>
+
+        <form id="userForm" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+                <label for="name">Full Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age <span class="required">*</span></label>
+                <input type="number" id="age" name="age" min="16" max="100" required placeholder="Enter your age">
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address <span class="required">*</span></label>
+                <textarea id="address" name="address" required placeholder="Enter your complete address" rows="3"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Favourite Subject <span class="required">*</span></label>
+                <select id="subject" name="subject" required>
+                    <option value="">-- Select your favourite subject --</option>
+                    <option value="Web Technology">Web Technology</option>
+                    <option value="Data Structures">Data Structures</option>
+                    <option value="Database Management">Database Management</option>
+                    <option value="Computer Networks">Computer Networks</option>
+                    <option value="Software Engineering">Software Engineering</option>
+                    <option value="Operating Systems">Operating Systems</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="movie">Favourite Movie</label>
+                <input type="text" id="movie" name="movie" placeholder="Enter your favourite movie (optional)">
+            </div>
+
+            <div class="form-group">
+                <label for="singer">Favourite Singer/Artist</label>
+                <input type="text" id="singer" name="singer" placeholder="Enter your favourite singer (optional)">
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Information</button>
+        </form>
+
+        <div class="output" id="outputArea">
+            <strong>Form Submission Result:</strong><br>
+            <div id="outputContent"></div>
+        </div>
+
+        <div style="background: #f1f2f6; padding: 20px; border-radius: 10px; margin-top: 25px;">
+            <h3>Form Features:</h3>
+            <ul>
+                <li>Required field validation</li>
+                <li>Age range validation (16-100)</li>
+                <li>Responsive design</li>
+                <li>Real-time form feedback</li>
+                <li>Clean, modern interface</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(event.target);
+            const data = {};
+            for (let [key, value] of formData.entries()) {
+                data[key] = value;
+            }
+            
+            // Basic validation
+            if (data.name.length < 2) {
+                alert('Name must be at least 2 characters long!');
+                return;
+            }
+            
+            if (data.age < 16 || data.age > 100) {
+                alert('Age must be between 16 and 100!');
+                return;
+            }
+            
+            if (data.address.length < 10) {
+                alert('Please enter a complete address!');
+                return;
+            }
+            
+            // Display results
+            let output = `<strong>✅ Form submitted successfully!</strong><br><br>
+                <strong>Name:</strong> ${data.name}<br>
+                <strong>Age:</strong> ${data.age} years<br>
+                <strong>Address:</strong> ${data.address}<br>
+                <strong>Favourite Subject:</strong> ${data.subject}<br>`;
+            
+            if (data.movie) output += `<strong>Favourite Movie:</strong> ${data.movie}<br>`;
+            if (data.singer) output += `<strong>Favourite Singer:</strong> ${data.singer}<br>`;
+            
+            output += `<br><strong>Submission Time:</strong> ${new Date().toLocaleString()}`;
+            
+            document.getElementById('outputContent').innerHTML = output;
+            document.getElementById('outputArea').style.display = 'block';
+            document.getElementById('outputArea').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

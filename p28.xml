@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="p28.xsl"?>
+<!-- XML Data for XSL Transformation -->
+<!-- Student: Pranjal Prateek | Branch: IT-C | College: NIET -->
+
+<college_data>
+    <college_info>
+        <name>NIET</name>
+        <full_name>Noida Institute of Engineering and Technology</full_name>
+        <location>Greater Noida, Uttar Pradesh</location>
+        <established>1999</established>
+        <website>www.niet.co.in</website>
+    </college_info>
+    
+    <students>
+        <student id="1">
+            <name>Pranjal Prateek</name>
+            <student_id>NIET2024IT001</student_id>
+            <branch>IT-C</branch>
+            <semester>4</semester>
+            <cgpa>8.5</cgpa>
+            <email>pranjal.prateek@niet.co.in</email>
+            <phone>+91-9876543210</phone>
+            <address>NIET Hostel A-205</address>
+        </student>
+        
+        <student id="2">
+            <name>Rahul Sharma</name>
+            <student_id>NIET2024IT002</student_id>
+            <branch>IT-C</branch>
+            <semester>4</semester>
+            <cgpa>7.8</cgpa>
+            <email>rahul.sharma@niet.co.in</email>
+            <phone>+91-9876543211</phone>
+            <address>Local Student</address>
+        </student>
+        
+        <student id="3">
+            <name>Anita Gupta</name>
+            <student_id>NIET2024IT003</student_id>
+            <branch>IT-C</branch>
+            <semester>4</semester>
+            <cgpa>9.2</cgpa>
+            <email>anita.gupta@niet.co.in</email>
+            <phone>+91-9876543212</phone>
+            <address>NIET Hostel B-101</address>
+        </student>
+        
+        <student id="4">
+            <name>Vikash Singh</name>
+            <student_id>NIET2024IT004</student_id>
+            <branch>IT-C</branch>
+            <semester>4</semester>
+            <cgpa>8.1</cgpa>
+            <email>vikash.singh@niet.co.in</email>
+            <phone>+91-9876543213</phone>
+            <address>Local Student</address>
+        </student>
+    </students>
+    
+    <courses>
+        <course>
+            <name>Web Technology</name>
+            <code>CS401</code>
+            <credits>4</credits>
+            <instructor>Dr. Rajesh Kumar</instructor>
+            <type>Theory + Lab</type>
+        </course>
+        
+        <course>
+            <name>Database Management Systems</name>
+            <code>CS402</code>
+            <credits>4</credits>
+            <instructor>Prof. Anita Sharma</instructor>
+            <type>Theory + Lab</type>
+        </course>
+        
+        <course>
+            <name>Computer Networks</name>
+            <code>CS403</code>
+            <credits>3</credits>
+            <instructor>Dr. Vikash Singh</instructor>
+            <type>Theory</type>
+        </course>
+        
+        <course>
+            <name>Software Engineering</name>
+            <code>CS404</code>
+            <credits>3</credits>
+            <instructor>Prof. Meera Gupta</instructor>
+            <type>Theory</type>
+        </course>
+    </courses>
+    
+    <metadata>
+        <created_date>2024-01-22</created_date>
+        <created_by>Pranjal Prateek</created_by>
+        <purpose>XSL Transformation Demo</purpose>
+        <subject>Web Technology</subject>
+    </metadata>
+</college_data>

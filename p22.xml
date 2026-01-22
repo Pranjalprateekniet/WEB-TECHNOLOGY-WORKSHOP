@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- XML with Namespaces Demo -->
+<!-- Student: Pranjal Prateek | Branch: IT-C | College: NIET -->
+
+<root xmlns:student="http://niet.edu/student"
+      xmlns:course="http://niet.edu/course"
+      xmlns:college="http://niet.edu/college"
+      xmlns:contact="http://niet.edu/contact">
+    
+    <!-- Student Information Namespace -->
+    <student:profile>
+        <student:personal_info>
+            <student:name>Pranjal Prateek</student:name>
+            <student:id>NIET2024IT001</student:id>
+            <student:branch>IT-C</student:branch>
+            <student:semester>4</student:semester>
+            <student:cgpa>8.5</student:cgpa>
+        </student:personal_info>
+        
+        <student:academic_record>
+            <student:enrollment_year>2024</student:enrollment_year>
+            <student:expected_graduation>2028</student:expected_graduation>
+            <student:current_status>Active</student:current_status>
+        </student:academic_record>
+    </student:profile>
+    
+    <!-- Course Information Namespace -->
+    <course:curriculum>
+        <course:subject>
+            <course:name>Web Technology</course:name>
+            <course:code>CS401</course:code>
+            <course:credits>4</course:credits>
+            <course:type>Theory + Lab</course:type>
+            <course:instructor>Dr. Rajesh Kumar</course:instructor>
+        </course:subject>
+        
+        <course:subject>
+            <course:name>Database Management Systems</course:name>
+            <course:code>CS402</course:code>
+            <course:credits>4</course:credits>
+            <course:type>Theory + Lab</course:type>
+            <course:instructor>Prof. Anita Sharma</course:instructor>
+        </course:subject>
+        
+        <course:subject>
+            <course:name>Computer Networks</course:name>
+            <course:code>CS403</course:code>
+            <course:credits>3</course:credits>
+            <course:type>Theory</course:type>
+            <course:instructor>Dr. Vikash Singh</course:instructor>
+        </course:subject>
+    </course:curriculum>
+    
+    <!-- College Information Namespace -->
+    <college:institution>
+        <college:name>NIET</college:name>
+        <college:full_name>Noida Institute of Engineering and Technology</college:full_name>
+        <college:location>Greater Noida, Uttar Pradesh</college:location>
+        <college:established>1999</college:established>
+        <college:affiliation>AKTU</college:affiliation>
+        <college:type>Private Engineering College</college:type>
+        
+        <college:departments>
+            <college:department name="Information Technology">
+                <college:head>Dr. Rajesh Kumar</college:head>
+                <college:students>120</college:students>
+                <college:faculty>15</college:faculty>
+            </college:department>
+        </college:departments>
+    </college:institution>
+    
+    <!-- Contact Information Namespace -->
+    <contact:information>
+        <contact:email>pranjal.prateek@niet.co.in</contact:email>
+        <contact:phone>+91-9876543210</contact:phone>
+        <contact:address>
+            <contact:hostel>NIET Boys Hostel</contact:hostel>
+            <contact:room>A-205</contact:room>
+            <contact:city>Greater Noida</contact:city>
+            <contact:state>Uttar Pradesh</contact:state>
+            <contact:country>India</contact:country>
+        </contact:address>
+    </contact:information>
+    
+    <!-- Mixed Namespace Example -->
+    <student:projects>
+        <student:project>
+            <student:title>Student Management System</student:title>
+            <course:technologies>HTML, CSS, JavaScript, MySQL</course:technologies>
+            <college:supervisor>Dr. Rajesh Kumar</college:supervisor>
+            <student:status>In Progress</student:status>
+        </student:project>
+    </student:projects>
+    
+    <!-- Document Metadata -->
+    <metadata xmlns="http://niet.edu/metadata">
+        <created_date>2024-01-22</created_date>
+        <created_by>Pranjal Prateek</created_by>
+        <purpose>XML Namespaces Demonstration</purpose>
+        <subject>Web Technology</subject>
+        <college>NIET</college>
+    </metadata>
+</root>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Frames Layout - 20% 60% 20%</title>
+</head>
+<frameset cols="20%,60%,20%">
+    <!-- Left Frame - Contents (20%) -->
+    <frame src="p15_left.html" name="contents" scrolling="auto">
+    
+    <!-- Center Frame - Main Content (60%) -->
+    <frame src="p15_center.html" name="main" scrolling="auto">
+    
+    <!-- Right Frame - Remarks (20%) -->
+    <frame src="p15_right.html" name="remarks" scrolling="auto">
+    
+    <noframes>
+        <body style="font-family: Arial, sans-serif; margin: 20px; background: #f4f4f4;">
+            <div style="background: white; padding: 20px; border-radius: 8px; text-align: center;">
+                <h1>Frames Not Supported</h1>
+                <p>Your browser does not support frames. Please use a modern browser or view individual pages:</p>
+                <ul style="list-style: none; padding: 0;">
+                    <li><a href="p15_left.html" style="color: #3498db; text-decoration: none; font-weight: bold;">📋 Contents</a></li>
+                    <li><a href="p15_center.html" style="color: #3498db; text-decoration: none; font-weight: bold;">📄 Main Content</a></li>
+                    <li><a href="p15_right.html" style="color: #3498db; text-decoration: none; font-weight: bold;">💬 Remarks</a></li>
+                </ul>
+                <p><strong>Student:</strong> Pranjal Prateek | <strong>Branch:</strong> IT-C | <strong>College:</strong> NIET</p>
+            </div>
+        </body>
+    </noframes>
+</frameset>
+</html>

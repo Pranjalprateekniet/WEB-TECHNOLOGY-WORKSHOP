@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- XML Schema (XSD) for Student Management System -->
+<!-- Student: Pranjal Prateek | Branch: IT-C | College: NIET -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://niet.edu/student"
+           xmlns:tns="http://niet.edu/student"
+           elementFormDefault="qualified">
+
+    <!-- Root Element -->
+    <xs:element name="student_management_system">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="system_info" type="tns:SystemInfoType"/>
+                <xs:element name="students" type="tns:StudentsType"/>
+                <xs:element name="courses" type="tns:CoursesType"/>
+            </xs:sequence>
+            <xs:attribute name="version" type="xs:string" use="required"/>
+            <xs:attribute name="created_date" type="xs:date" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- System Information Type -->
+    <xs:complexType name="SystemInfoType">
+        <xs:sequence>
+            <xs:element name="college_name" type="xs:string"/>
+            <xs:element name="location" type="xs:string"/>
+            <xs:element name="academic_year" type="xs:string"/>
+            <xs:element name="semester" type="xs:positiveInteger"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Students Type -->
+    <xs:complexType name="StudentsType">
+        <xs:sequence>
+            <xs:element name="student" type="tns:StudentType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Student Type -->
+    <xs:complexType name="StudentType">
+        <xs:sequence>
+            <xs:element name="personal_info" type="tns:PersonalInfoType"/>
+            <xs:element name="academic_info" type="tns:AcademicInfoType"/>
+            <xs:element name="contact_info" type="tns:ContactInfoType"/>
+            <xs:element name="projects" type="tns:ProjectsType" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="required"/>
+        <xs:attribute name="status" type="tns:StudentStatusType" use="required"/>
+    </xs:complexType>
+
+    <!-- Personal Information Type -->
+    <xs:complexType name="PersonalInfoType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="student_id" type="tns:StudentIdType"/>
+            <xs:element name="branch" type="tns:BranchType"/>
+            <xs:element name="section" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Academic Information Type -->
+    <xs:complexType name="AcademicInfoType">
+        <xs:sequence>
+            <xs:element name="current_semester" type="xs:positiveInteger"/>
+            <xs:element name="cgpa" type="tns:CGPAType"/>
+            <xs:element name="admission_year" type="xs:gYear"/>
+            <xs:element name="expected_graduation" type="xs:gYear"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Contact Information Type -->
+    <xs:complexType name="ContactInfoType">
+        <xs:sequence>
+            <xs:element name="email" type="tns:EmailType"/>
+            <xs:element name="phone" type="tns:PhoneType"/>
+            <xs:element name="address" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Projects Type -->
+    <xs:complexType name="ProjectsType">
+        <xs:sequence>
+            <xs:element name="project" type="tns:ProjectType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Project Type -->
+    <xs:complexType name="ProjectType">
+        <xs:sequence>
+            <xs:element name="title" type="xs:string"/>
+            <xs:element name="description" type="xs:string"/>
+            <xs:element name="technologies" type="xs:string"/>
+            <xs:element name="start_date" type="xs:date"/>
+            <xs:element name="status" type="tns:ProjectStatusType"/>
+        </xs:sequence>
+        <xs:attribute name="priority" type="tns:PriorityType" default="medium"/>
+    </xs:complexType>
+
+    <!-- Courses Type -->
+    <xs:complexType name="CoursesType">
+        <xs:sequence>
+            <xs:element name="course" type="tns:CourseType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Course Type -->
+    <xs:complexType name="CourseType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="code" type="tns:CourseCodeType"/>
+            <xs:element name="credits" type="xs:positiveInteger"/>
+            <xs:element name="instructor" type="xs:string"/>
+            <xs:element name="type" type="tns:CourseTypeEnum"/>
+        </xs:sequence>
+        <xs:attribute name="semester" type="xs:positiveInteger" use="required"/>
+    </xs:complexType>
+
+    <!-- Simple Types and Restrictions -->
+    <xs:simpleType name="StudentIdType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="NIET[0-9]{4}[A-Z]{2}[0-9]{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="BranchType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="IT-A"/>
+            <xs:enumeration value="IT-B"/>
+            <xs:enumeration value="IT-C"/>
+            <xs:enumeration value="CSE-A"/>
+            <xs:enumeration value="CSE-B"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="CGPAType">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0.0"/>
+            <xs:maxInclusive value="10.0"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="EmailType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="PhoneType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\+91-[0-9]{10}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="CourseCodeType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z]{2}[0-9]{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="StudentStatusType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="active"/>
+            <xs:enumeration value="inactive"/>
+            <xs:enumeration value="graduated"/>
+            <xs:enumeration value="suspended"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ProjectStatusType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="planning"/>
+            <xs:enumeration value="in_progress"/>
+            <xs:enumeration value="completed"/>
+            <xs:enumeration value="on_hold"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="PriorityType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="high"/>
+            <xs:enumeration value="medium"/>
+            <xs:enumeration value="low"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="CourseTypeEnum">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Theory"/>
+            <xs:enumeration value="Lab"/>
+            <xs:enumeration value="Theory + Lab"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

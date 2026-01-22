@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Content Frame</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 15px; background: #ffffff; }
+        .header { background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 20px; border-radius: 10px; text-align: center; margin-bottom: 20px; }
+        .welcome { background: #e3f2fd; padding: 15px; border-radius: 8px; margin: 15px 0; text-align: center; color: #1565c0; }
+        .info-box { background: #f8f9fa; padding: 15px; border-left: 4px solid #28a745; margin: 15px 0; border-radius: 5px; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+        .feature-item { background: #e8f5e9; padding: 15px; border-radius: 8px; text-align: center; transition: transform 0.3s; }
+        .feature-item:hover { transform: translateY(-3px); box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; margin-top: 0; }
+        h2 { color: #e74c3c; }
+        .highlight { background: #fff3cd; padding: 2px 6px; border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Web Technology Frames Demo</h1>
+        <p><strong>Student:</strong> Pranjal Prateek | <strong>Branch:</strong> IT-C | <strong>Subject:</strong> Web Technology</p>
+    </div>
+
+    <div class="welcome">
+        <h2>Welcome to Main Content Area (60% width)</h2>
+        <p>This center frame displays the main content while navigation remains constant in the left frame.</p>
+    </div>
+
+    <div class="info-box">
+        <h3>About This Frames Layout</h3>
+        <p>This page demonstrates HTML frames dividing the browser into three sections:</p>
+        <ul>
+            <li><strong>Left Frame (20%):</strong> Navigation and contents menu</li>
+            <li><strong>Center Frame (60%):</strong> Main content area (this section)</li>
+            <li><strong>Right Frame (20%):</strong> Remarks and additional information</li>
+        </ul>
+    </div>
+
+    <h2>Frame Navigation</h2>
+    <p>Use links in the left frame to navigate between pages. Content loads here while navigation stays constant.</p>
+
+    <div class="feature-grid">
+        <div class="feature-item">
+            <h4>📄 Student CV</h4>
+            <p>Pranjal Prateek's academic profile</p>
+        </div>
+        <div class="feature-item">
+            <h4>📅 Time Table</h4>
+            <p>IT-C class schedule</p>
+        </div>
+        <div class="feature-item">
+            <h4>🏢 Infrastructure</h4>
+            <p>NIET college facilities</p>
+        </div>
+        <div class="feature-item">
+            <h4>💻 Web Technology</h4>
+            <p>Course materials and examples</p>
+        </div>
+    </div>
+
+    <div class="info-box">
+        <h3>Technical Implementation</h3>
+        <p>Frames use <span class="highlight">&lt;frameset&gt;</span> with cols="20%,60%,20%" structure:</p>
+        <code style="background: #f5f5f5; padding: 8px; display: block; border-radius: 3px;">
+            &lt;frameset cols="20%,60%,20%"&gt;<br>
+            &nbsp;&nbsp;&lt;frame src="left.html" name="contents"&gt;<br>
+            &nbsp;&nbsp;&lt;frame src="center.html" name="main"&gt;<br>
+            &nbsp;&nbsp;&lt;frame src="right.html" name="remarks"&gt;<br>
+            &lt;/frameset&gt;
+        </code>
+    </div>
+
+    <h2>Modern Alternatives</h2>
+    <p>While frames work, modern alternatives include:</p>
+    <ul>
+        <li><strong>CSS Grid/Flexbox:</strong> Better layout control</li>
+        <li><strong>AJAX:</strong> Dynamic content loading</li>
+        <li><strong>Single Page Apps:</strong> React, Vue frameworks</li>
+        <li><strong>Server-Side Includes:</strong> Template-based content</li>
+    </ul>
+
+    <div style="background: #e8f5e9; padding: 15px; border-radius: 5px; margin-top: 20px;">
+        <p><strong>Note:</strong> Click links in the left frame to see different content load here. The right frame shows relevant remarks.</p>
+    </div>
+</body>
+</html>
